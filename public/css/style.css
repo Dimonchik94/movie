@@ -1,0 +1,103 @@
+#head{
+    background: #dadada !important;
+}
+.page-title{
+    text-align: center;
+}
+
+.cards-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.card{
+    width: 200px;
+    text-align: center;
+    background: #ccc;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-img-top{
+    margin: 0 auto;
+    width: 150px;
+    height: 250px;
+}
+
+.card-body{
+    font-weight: bold;
+}
+
+.current-movie{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#current-movie-poster{
+    margin: 20px;
+}
+
+#current-movie-description{
+    margin: 20px;
+    font-size: 20px;
+}
+
+.poster-name{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.big-poster{
+    width: 300px;
+    height: 450px;
+}
+
+
+#addMovie{
+    margin: 20px;
+}
+
+.poster{
+    width: 100px;
+    height: 150px;
+}
+
+
+.popup{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+.popup-content{
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    height: fit-content;
+    background: #eaeaea;
+    border-radius: 8px;
+    padding-bottom: 10px;
+}
+
+.popup-head h4{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.close-img{
+    position: absolute;
+    width: 20px;
+    top: 13px;
+    right: 13px;
+    cursor: pointer;
+}
+
+#movie-name{
+    width: 70%;
+}
