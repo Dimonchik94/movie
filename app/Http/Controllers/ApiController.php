@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Movie;
 use Illuminate\Http\Request;
 use App\Http\Services\ApiService;
 use Illuminate\Support\Facades\DB;
@@ -27,8 +28,8 @@ class ApiController extends Controller
      */
     public function index()
     {
-        $films = DB::table('movies')->paginate(3);
-        return json_encode($films, JSON_UNESCAPED_UNICODE);
+        $response = $this->apiService->findAll();
+        return json_encode($response, JSON_UNESCAPED_UNICODE);
     }
 
     /**
@@ -50,7 +51,8 @@ class ApiController extends Controller
      */
     public function show($id)
     {
-        //
+        $response = $this->apiService->findOne($id);
+        return json_encode($response, JSON_UNESCAPED_UNICODE);
     }
 
     /**

@@ -12,7 +12,7 @@ class MovieService {
         $img = $request->img;
         $status = $request->status;
 
-        return DB::table('movies')->where('id', $id)->update([
+        return Movie::where('id', $id)->update([
             'name' => $name,
             'poster' => $img,
             'status' => $status
@@ -27,7 +27,7 @@ class MovieService {
         $response = [];
 
         // new movie id
-        $id = DB::table('movies')->insertGetId([
+        $id = Movie::insertGetId([
             'name' => $name,
             'poster' => $img,
         ]);
@@ -52,7 +52,7 @@ class MovieService {
     public function deleteMovie($id){
         $response = [];
         $response["del_links"] = DB::table('ganre_movie')->where('movie_id',$id)->delete();
-        $response["del_movie"] = DB::table('movies')->where('id',$id)->delete();
+        $response["del_movie"] = Movie::where('id',$id)->delete();
         return $response;
     }
 
